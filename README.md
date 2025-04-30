@@ -27,7 +27,11 @@ Welcome to my journey toward becoming a **Cloud Security Engineer**. I'm transit
 ## 🛠️ Hands-On Projects
 
 - Check out projects:
-  In progress
+
+- [Week 1 Project A](cloud-security-engineer-journey/ProjectA)
+
+- More projects to come
+
 
 
 ---
