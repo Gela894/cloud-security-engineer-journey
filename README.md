@@ -20,20 +20,24 @@ Welcome to my journey toward becoming a **Cloud Security Engineer**. I'm transit
 
 ---
 
-## 📆 Weekly Progress Tracker
+## 📆 Progress Tracker
 
 - See respective folders for weekly progress
 
-|Week | Focus Area | Description |
-|-----|-------------|-------------|
-| 1 | Linux & Bash basics | User, Files, permissions |
-
+| Focus Area | Description |
+|--------------|-------------|
+| Linux & Bash basics | User, Files, permissions |
 
 -----
 
-## 🛠️ Hands-On Projects
+## 🧪Hands-on Labs
+- These labs shows my daily exercises for each week.
 
-- Check out projects:
+-----
+
+## 🛠️ Projects
+
+- These projects provide a summary of what I learn each week.
 
 - [week-1 Project-a.md](week-1/Project-a.md)
 
