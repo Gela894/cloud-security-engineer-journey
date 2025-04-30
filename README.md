@@ -28,7 +28,7 @@ Welcome to my journey toward becoming a **Cloud Security Engineer**. I'm transit
 
 - Check out projects:
 
-- [week -1 ProjectA](week-1/ProjectA)
+- [week -1 Project A.md](week-1/ProjectA.md)
 
 - More projects to come
 
