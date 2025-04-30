@@ -25,8 +25,8 @@ Welcome to my journey toward becoming a **Cloud Security Engineer**. I'm transit
 - See respective folders for weekly progress
 
 |Week | Focus Area | Description |
-|-----|-------------|
-| 1 | Linux & Bash basics | User, Files, permissions
+|-----|-------------|-------------|
+| 1 | Linux & Bash basics | User, Files, permissions |
 
 
 -----
