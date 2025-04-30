@@ -31,13 +31,13 @@ Welcome to my journey toward becoming a **Cloud Security Engineer**. I'm transit
 -----
 
 ## 🧪Hands-on Labs
-- These labs shows my daily exercises for each week.
+- These labs show my daily exercises.
 
 -----
 
 ## 🛠️ Projects
 
-- These projects provide a summary of what I learn each week.
+- These projects provide a summary of what I learn.
 
 - [week-1 Project-a.md](week-1/Project-a.md)
 
