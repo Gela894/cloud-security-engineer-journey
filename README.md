@@ -25,19 +25,17 @@ Welcome to my journey toward becoming a **Cloud Security Engineer**. I'm transit
 | Focus Area | Description | Status |
 |--------------|-------------|
 | Linux & Bash basics | User, Files, permissions | ✅ Completed |
+| EC2, SSH, RDP | Key pair, security groups | ✅ Completed |
 
 -----
 
-## 🧪Hands-on Labs
-- These labs show my daily exercises.
-
------
 
 ## 🛠️ Projects
 
 - These projects provide a summary of what I learn.
 
 - [Linuxproject-a.md](Linux/Linuxproject-a.md)
+- [EC2project-1.md](EC2/EC2project-1.md)
 
 - More projects to come
 
