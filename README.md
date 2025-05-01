@@ -39,7 +39,7 @@ Welcome to my journey toward becoming a **Cloud Security Engineer**. I'm transit
 
 - These projects provide a summary of what I learn.
 
-- [week-1 LinuxProject-a.md](week-1/LinuxProject-a.md)
+- [week1-project-a.md](Linux/week1-project-a.md)
 
 - More projects to come
 
