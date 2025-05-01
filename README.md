@@ -32,7 +32,7 @@ Welcome to my journey toward becoming a **Cloud Security Engineer**. I'm transit
 
 ## 🛠️ Projects
 
-- These projects provide a summary of what I learn.
+- These projects provide a summary of what I have learnt.
 
 - [Linuxproject-a.md](Linux/Linuxproject-a.md)
 - [EC2project-1.md](EC2/EC2project-1.md)
