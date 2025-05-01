@@ -23,7 +23,7 @@ Welcome to my journey toward becoming a **Cloud Security Engineer**. I'm transit
 ## 📆 Progress Tracker
 
 | Focus Area | Description | Status |
-|--------------|-------------|
+|--------------|-------------|------|
 | Linux & Bash basics | User, Files, permissions | ✅ Completed |
 | EC2, SSH, RDP | Key pair, security groups | ✅ Completed |
 
