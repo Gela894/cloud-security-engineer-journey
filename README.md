@@ -22,11 +22,9 @@ Welcome to my journey toward becoming a **Cloud Security Engineer**. I'm transit
 
 ## 📆 Progress Tracker
 
-- See respective folders for weekly progress
-
-| Focus Area | Description |
+| Focus Area | Description | Status |
 |--------------|-------------|
-| Linux & Bash basics | User, Files, permissions |
+| Linux & Bash basics | User, Files, permissions | ✅ Completed |
 
 -----
 
@@ -39,7 +37,7 @@ Welcome to my journey toward becoming a **Cloud Security Engineer**. I'm transit
 
 - These projects provide a summary of what I learn.
 
-- [week1-project-a.md](Linux/week1-project-a.md)
+- [project-a.md](Linux/project-a.md)
 
 - More projects to come
 
