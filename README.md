@@ -34,7 +34,7 @@ Welcome to my journey toward becoming a **Cloud Security Engineer**. I'm transit
 
 - These projects provide a summary of what I have learnt.
 
-- [Linux](Linux/Linux)
+- [Linux](Linux)
 - [EC2project-1.md](EC2/EC2project-1.md)
 
 - More projects to come
