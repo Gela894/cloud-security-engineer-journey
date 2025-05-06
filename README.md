@@ -36,6 +36,7 @@ Welcome to my journey toward becoming a **Cloud Security Engineer**. I'm transit
 
 - [Linux](Linux)
 - [EC2](EC2)
+-  [IAM](IAM)
 
 - More projects to come
 
