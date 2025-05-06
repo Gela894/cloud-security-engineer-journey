@@ -5,11 +5,11 @@ I implemented least privilege principles, enforced Multi-Factor Authentication (
 
 ## 📌 Objective
 
-This project demonstrates how to design and implement AWS IAM best practices, including:
+- This project demonstrates how to design and implement AWS IAM best practices, including:
 	- Create IAM users, roles, and groups with least-privilege policies
 	- Enforce MFA on sensitive roles
 	- Use CloudTrail and IAM policy simulator to detect and respond to access issues
-  - Simulate an insider threat and demonstrate how AWS security tools help prevent misuse
+  	- Simulate an insider threat and demonstrate how AWS security tools help prevent misuse
 
 
 ---
@@ -43,10 +43,57 @@ This project demonstrates how to design and implement AWS IAM best practices, in
 ![image](https://github.com/user-attachments/assets/7de21ba4-d789-4035-821f-16a0c964235a)
 
 ![image](https://github.com/user-attachments/assets/8e14cf0f-d3ea-4048-b36d-0af56dcb58d0)
-- EC2S3AccessRole created.
+- EC2S3AccessRole created
 
 ## Attach Role to EC2 Instance
-- Select EC2 instance
--   To be continued!
+- Select your EC2 instance
+- Under Actions dropdown > select security > select Modify IAM role
+- Choose IAM role (i.e. EC2S3Accessrole)
+- Select Update IAM role
+![image](https://github.com/user-attachments/assets/a3721fd2-9f56-40ea-b00b-0e509979ff30)
+	- IAM role created
+
+## Create a Secure IAM Policies
+This is to establish the principle of least privilege for dev_user when accessing the S3 bucket.
+- Go to IAM dashboard
+- Select policies from left pane > Create policy
+- Select a service (i.e. S3)
+  	- Under S3 actions > select GetObject > select PutObject
+  	- Select Next
+- Fill out policy name
+- Create policy
+<pre><code> 
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "VisualEditor0",
+            "Effect": "Allow",
+            "Action": [
+                "s3:PutObject",
+                "s3:GetObject"
+            ],
+            "Resource": "arn:aws:s3:::my-secure-dev-bucket/my-secure-dev-bucket"
+        }
+    ]
+}
+</code></pre>
+
+![image](https://github.com/user-attachments/assets/87f728de-d117-445e-9682-a88036b46f2d)
+	- IAM policy created
+
+# Attach Secure Policy to IAM user
+- On IAM dashboard, under users, select dev_user
+- Under permission policies > select Add permisions
+  	- From Permissions options > Select Attach policies directly
+  	- Search for the policy created (i.e. dev_User_Policy)
+  	- Select Next
+- Select add permissions
+![image](https://github.com/user-attachments/assets/3411e5a8-b1b3-4380-bd6b-d21b2284bcfa)
+	- Policy attached to IAM user
+
+## Enforce MFA for Sensitive Users
+For the security auditor, we will enable MFA to assume certain roles
+- To be continued!!
 
 
