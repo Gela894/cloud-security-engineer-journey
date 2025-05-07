@@ -15,7 +15,7 @@ Welcome to my journey toward becoming a **Cloud Security Engineer**. I'm transit
  DevSecOps, CI/CD Security |
  SIEM, Threat Detection, IR |
  Automation, Python
- Infrastructure as Code (Terraform, CFN) |
+ Infrastructure as Code (Terraform) |
  Data Security, Compliance (NIST, KMS, FedRAMP) |
 
 ---
