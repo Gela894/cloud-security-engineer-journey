@@ -25,7 +25,8 @@ Welcome to my journey toward becoming a **Cloud Security Engineer**. I'm transit
 | Focus Area | Description | Status |
 |--------------|-------------|------|
 | Linux & Bash basics | User, Files, permissions | ✅ Completed |
-| EC2, SSH, RDP | Key pair, security groups | ✅ Completed |
+| EC2, SSH, RDP | Key pair, Security groups | ✅ Completed |
+| IAM, MFA | User, Groups, Roles, Policies, Least Privilege | ⌛ In progress |
 
 -----
 
@@ -36,7 +37,7 @@ Welcome to my journey toward becoming a **Cloud Security Engineer**. I'm transit
 
 - [Linux](Linux)
 - [EC2](EC2)
--  [IAM](IAM)
+- [IAM](IAM)
 
 - More projects to come
 
