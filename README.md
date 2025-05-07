@@ -22,16 +22,22 @@ Welcome to my journey toward becoming a **Cloud Security Engineer**. I'm transit
 
 ## 📆 Progress Tracker
 
-| Focus Area | Description | Status |
+| Topic | Focus Area | Status |
 |--------------|-------------|------|
 | Linux & Bash basics | User, Files, permissions | ✅ Completed |
 | EC2, SSH, RDP | Key pair, Security groups | ✅ Completed |
 | IAM, MFA | User, Groups, Roles, Policies, Least Privilege | ⌛ In progress |
 | VPC, Networking essentials | Route tables, NACLs, Subnets, Internet Gateways | ⌛ In progress |
 | S3 | Bucket policy, ACL, Encryption, Versioning | ⌛ In progress |
+| CloudWatch, CloudTrail | Logging & Monitoring, Metrics, Alarms | 🪈 In pipeline |
+| Capstone Project | Deploy a secure 2 - tier web app environment | 🪈 In pipeline |
+| AWS Config, Security Hub | Compliance checks, Security aggregation | 🪈 In pipeline |
+| AWS WAF, Shield | Application security, Network protection, Web layer defense | 🪈 In pipeline |
+| Python Basics | Variables, Conditionals, Loops, Functions | 🪈 In pipeline |
 
------
 
+
+----------
 
 ## 🛠️ Projects
 
@@ -40,6 +46,7 @@ Welcome to my journey toward becoming a **Cloud Security Engineer**. I'm transit
 - [Linux](Linux)
 - [EC2](EC2)
 - [IAM](IAM)
+- [VPC](VPC)
 
 - More projects to come
 
