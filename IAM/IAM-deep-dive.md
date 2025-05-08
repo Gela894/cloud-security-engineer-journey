@@ -53,15 +53,18 @@ I implemented least privilege principles, enforced Multi-Factor Authentication (
 ![image](https://github.com/user-attachments/assets/a3721fd2-9f56-40ea-b00b-0e509979ff30)
 	- IAM role created
 
-## Create a Secure IAM Policies
-This is to establish the principle of least privilege for dev_user when accessing the S3 bucket.
+## Create a Secure IAM Policy and Enforce MFA for Sensitive access
+I created a policy to ensure least privilege is established and enforced MFA for dev_user and security_auditor when accessing the S3 bucket.
 - Go to IAM dashboard
 - Select policies from left pane > Create policy
 - Select a service (i.e. S3)
-  	- Under S3 actions > select GetObject > select PutObject
+  	- Under S3 actions: select GetObject > select PutObject
+  	- Under resources: copy and paste bucket ARN
   	- Select Next
+  	- ![image](https://github.com/user-attachments/assets/8ad6b21d-d708-4b02-9b53-b16cd5ccac89)
 - Fill out policy name
 - Create policy
+  
 <pre><code> 
 {
     "Version": "2012-10-17",
@@ -73,27 +76,47 @@ This is to establish the principle of least privilege for dev_user when accessin
                 "s3:PutObject",
                 "s3:GetObject"
             ],
-            "Resource": "arn:aws:s3:::my-secure-dev-bucket/my-secure-dev-bucket"
+            "Resource": "arn:aws:s3:::my-secure-dev-bucket/my-secure-dev-bucket",
+            "Condition": {
+                "Bool": {
+                    "aws:MultiFactorAuthPresent": "true"
+                }
+            }
         }
     ]
 }
 </code></pre>
 
-![image](https://github.com/user-attachments/assets/87f728de-d117-445e-9682-a88036b46f2d)
+- ![image](https://github.com/user-attachments/assets/fd662f98-376b-4888-9b05-60724b24f5d9)
 	- IAM policy created
 
-# Attach Secure Policy to IAM user
-- On IAM dashboard, under users, select dev_user
+## Attach Secure Policy to IAM user
+Since both dev_user and security_user are in the same group i.e. DevTeam, I attached the policy to the group.
+- On IAM dashboard, under user groups, select DevTeam
 - Under permission policies > select Add permisions
   	- From Permissions options > Select Attach policies directly
-  	- Search for the policy created (i.e. dev_User_Policy)
+  	- Search for the policy created (i.e. dev_team_policy)
   	- Select Next
 - Select add permissions
-![image](https://github.com/user-attachments/assets/3411e5a8-b1b3-4380-bd6b-d21b2284bcfa)
-	- Policy attached to IAM user
+- ![image](https://github.com/user-attachments/assets/caa1a0c4-29c2-4a8f-af11-30d611db48ae)
+	- Policy attached to group
 
-## Enforce MFA for Sensitive Users
-For the security auditor, we will enable MFA to assume certain roles
+## Monitoring with CloudTrail & CloudWatch
+We will be enabling CloudTrail to track IAM actions and monitor logs real-time using CloudWatch. For this, we will create a CloudTrail role for CloudTrail to send logs to CloudWatch.
+- Create a CloudTrail role.
+- From IAM dashboard, select the "Create Role" button
+  	- Fill out the necessary details:
+   	- Trusted Entity = AWS service > Use case = CloudTrail
+  	- Select next
+   	- Add Permissions: CloudTrailServiceRolePolicy was already autoselected
+  	  	** We must add "CloudWatchLogsFullAccess" policy for CloudTrail to send logs to CloudWatch**
+  	- Review and select create role.
+- ![image](https://github.com/user-attachments/assets/b2cb8ad3-f7ac-4391-b072-a0db25e2b584)
+- Now, let us go back to the IAM dashboard and create a custom policy for CloudTrail
+- Select policies > create policy > specify permissions > Next
+- Enter policy name > create policy
+- ![image](https://github.com/user-attachments/assets/19a2f5ee-b585-4bcb-9d7d-78d35fa9cde4)
+
 - To be continued!!
 
 
