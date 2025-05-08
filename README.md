@@ -24,7 +24,7 @@ Welcome to my journey toward becoming a **Cloud Security Engineer**. I'm transit
 
 | Topic | Focus Area | Status |
 |--------------|-------------|------|
-| Linux & Bash basics | User, Files, permissions | ✅ Completed |
+| Linux & Bash basics | User, Files, permissions, scripting | ✅ Completed |
 | EC2, SSH, RDP | Key pair, Security groups | ✅ Completed |
 | IAM, MFA | User, Groups, Roles, Policies, Least Privilege | ⌛ In progress |
 | VPC, Networking essentials | Route tables, NACLs, Subnets, Internet Gateways | ✅ Completed |
