@@ -143,9 +143,9 @@ We will be enabling CloudTrail to track IAM actions and monitor logs real-time u
 }	 
 </code></pre>
 
-- Next add the AWS managed policy titled "AWSCloudTrail_ReadOnlyAccess" and the four custom managed CloudTrail policies displayed in the image below.
+- Next add the AWS managed policy titled "AWSCloudTrail_ReadOnlyAccess" CloudWatchlogs_Policy, and the four custom managed CloudTrail policies displayed in the image below.
 - Select next > name role > review and create role
-![image](https://github.com/user-attachments/assets/248377f8-e5aa-4e62-8867-b219d7ac29eb)
+![image](https://github.com/user-attachments/assets/33746247-9d63-45a5-b779-964f3f9ffd0b)
 	- CloudTrail_role created
 
 - Upon executing the activity above, I asked a question "What's a trust relationship?" The answer is, a trust relationship delegates access for defined entities such as users, roles to perform specific IAM role functions. Obviously, a good example is what I have illustrated above, thus a trust relationship between CloudTrail and CloudWatch.
