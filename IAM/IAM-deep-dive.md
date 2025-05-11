@@ -153,8 +153,9 @@ We will be enabling CloudTrail to track IAM actions and monitor logs real-time u
 - Next, we are going to configure CloudTrail to start tracking logs in realtime.
 	- From AWS management console, search CloudTrail
   	- Create trail > and fill out the following details:
-  	  	- Trail name > create or choose existing S3 bucket > disable Log file SSE-KMS encryption > enable Log file 		  validation.
-  	  	- Enable CloudWatch logs > choose existing IAM role (i.e.CloudTrail_role) > select next
+  	  	- Trail name > create or choose existing S3 bucket > disable Log file SSE-KMS encryption > enable Log file validation.
+  	  	- Enable CloudWatch logs > choose existing and input log group name
+  	  	- Choose existing IAM role (i.e.CloudTrail_role) > select next
   	  	- Under Event type, select management events
   	  	- Under Management Events, Choose "Read" and "Write" and select Next
   	  	- Review, create and select Next
