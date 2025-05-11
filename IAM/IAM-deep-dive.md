@@ -3,18 +3,18 @@
 In this hands-on project, I focused on building a secure Identity and Access Management (IAM) setup in AWS. 
 I implemented least privilege principles, enforced Multi-Factor Authentication (MFA), and used CloudTrail and CloudWatch to monitor and track log events.
 
-## 📌 Objective
+##  Objective
 
 - This project demonstrates how to design and implement AWS IAM best practices, including:
 	- Create IAM users, roles, and groups with least-privilege policies
 	- Enforce MFA on sensitive roles
-	- Use CloudTrail and IAM policy simulator to detect and respond to access issues
+	- Use CloudTrail and CloudWatch to monitor, log events and detect suspicious activities.
   	- Simulate an insider threat and demonstrate how AWS security tools help prevent misuse
 
 
 ---
 
-## 🧱 Architecture Overview
+##  Architecture Overview
 
 - I started by creating:
   - Two IAM users: dev_user, security_auditor
