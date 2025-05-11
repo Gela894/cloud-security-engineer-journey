@@ -143,7 +143,7 @@ We will be enabling CloudTrail to track IAM actions and monitor logs real-time u
 }	 
 </code></pre>
 
-- Next add the AWS managed policy titled "AWSCloudTrail_ReadOnlyAccess" and the four custom managed roles displayed in the image below.
+- Next add the AWS managed policy titled "AWSCloudTrail_ReadOnlyAccess" and the four custom managed CloudTrail policies displayed in the image below.
 - Select next > name role > review and create role
 ![image](https://github.com/user-attachments/assets/248377f8-e5aa-4e62-8867-b219d7ac29eb)
 	- CloudTrail_role created
