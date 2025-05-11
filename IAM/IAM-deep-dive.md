@@ -1,7 +1,7 @@
 # 🔐 AWS IAM Lab – Identity and Access Management Project
 
 In this hands-on project, I focused on building a secure Identity and Access Management (IAM) setup in AWS. 
-I implemented least privilege principles, enforced Multi-Factor Authentication (MFA), and used CloudTrail and IAM policy simulation to monitor and troubleshoot access.
+I implemented least privilege principles, enforced Multi-Factor Authentication (MFA), and used CloudTrail and CloudWatch to monitor and track log events.
 
 ## 📌 Objective
 
@@ -36,8 +36,8 @@ I implemented least privilege principles, enforced Multi-Factor Authentication (
   - On IAM dashboard, in the left pane, select Roles.
   - Select the "Create Role" button
   - Fill out the necessary details:
-      - Trusted Entity = AWS service > Use case = EC2
-      - Add Permissions = search and attach AmazonS3ReadOnlyAccess
+      - Trusted Entity: AWS service > Use case = EC2
+      - Add Permissions: search and attach AmazonS3ReadOnlyAccess
       - Add Role name, review and select create role
 
 ![image](https://github.com/user-attachments/assets/7de21ba4-d789-4035-821f-16a0c964235a)
@@ -100,7 +100,7 @@ I created a policy to ensure least privilege is established and enforced MFA for
 	- IAM policy created
 
 ## Attach Secure Policy to IAM user
-Since both dev_user and security_user are in the same group i.e. DevTeam, I attached the policy to the group.
+Since both dev_user and security_auditor are in the same group i.e. DevTeam, I attached the policy to the group.
 - On IAM dashboard, under user groups, select DevTeam
 - Under permission policies > select Add permisions
   	- From Permissions options > Select Attach policies directly
@@ -112,35 +112,43 @@ Since both dev_user and security_user are in the same group i.e. DevTeam, I atta
 
 ## Monitoring with CloudTrail & CloudWatch
 We will be enabling CloudTrail to track IAM actions and monitor logs real-time using CloudWatch. For this, we will create a CloudTrail role for CloudTrail to send logs to CloudWatch.
-- Let's begin by creating a custom policy:
+- Let's begin by creating a custom CloudWatch policy:
   	- From IAM dashboard, select Policies > create policy
-  	- Use the JSON policy editor > select next
-  	- Fill in policy name "CloudTrailCloudWatchLogsPolicy" > create policy
-  ![image](https://github.com/user-attachments/assets/bc02b2b5-033f-4048-8787-fea034fee55c)
-  	- Custom Policy created
-- For this next step, I created a new IAM role with a different approach thus by using a Custom trust policy instead of AWS service. The reason for this is to allow us customize the trust policy for Cloudtrail instead of using the service template. The AWS service template comes with a pre-attached AWS managed policy for Cloudtrail which isn't modifiable, hence, I decided to use the approach of a Custom trust policy.
-- From IAM dashboard, select Policies > create policy
+  	- Use the Visual policy editor and select these parameters:
+  	  	- CreateLogGroup
+  	  	- CreateLogStream
+  	  	- PutLogEvents
+  	  	- Specify ARN for LogStream AND LogGroup
+  	- Fill in policy name "CloudWatchlogs_Policy" > create policy
+  ![image](https://github.com/user-attachments/assets/80b8240a-2c3f-4fda-8fcb-ae3c5c9768ab)
+  	- CloudWatch Policy created
+  	  
+- In this next step, I created a new IAM role with a different approach thus by using a Custom trust policy instead of AWS service. The reason is to allow us customize the trust policy for Cloudtrail instead of using the service template. The AWS service template comes with a pre-attached AWS managed policy for Cloudtrail which isn't modifiable, hence, I decided to use the approach of a Custom trust policy.
+- Let's begin by creating a CloudTrail role:
+- From IAM dashboard, select Roles > create role
 	- In the policy editor, I edited the policy statement as:
  <pre><code> 
 {
-	"Version": "2012-10-17",
-	"Statement": [
-		{
-			"Sid": "Statement1",
-			"Effect": "Allow",
-			"Principal": {},
-			"Action": "sts:AssumeRole"
-		}
-	]
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "Statement1",
+            "Effect": "Allow",
+            "Principal": {
+                "Service": "cloudtrail.amazonaws.com"
+            },
+            "Action": "sts:AssumeRole"
+        }
+    ]
 }	 
 </code></pre>
 
-- Next Add the AWS managed policy titled "AWSCloudTrail_ReadOnlyAccess" and "CloudTrailCloudWatchLogsPolicy"
-- Select next > name policy > review and create role
- ![image](https://github.com/user-attachments/assets/0c237f91-4144-4678-bf70-9e66295b5210)
+- Next add the AWS managed policy titled "AWSCloudTrail_ReadOnlyAccess" and the four custom managed roles displayed in the image below.
+- Select next > name role > review and create role
+![image](https://github.com/user-attachments/assets/248377f8-e5aa-4e62-8867-b219d7ac29eb)
 	- CloudTrail_role created
 
-- Upon executing the activity above, I asked a question "What's a trust relationship?" The answer is, a trust relationship delegate access for defined entities such as users, roles to perform specific IAM role functions. Obviously, a good example is what I have illustrated above, thus a trust relationship between CloudTrail and CloudWatch.
+- Upon executing the activity above, I asked a question "What's a trust relationship?" The answer is, a trust relationship delegates access for defined entities such as users, roles to perform specific IAM role functions. Obviously, a good example is what I have illustrated above, thus a trust relationship between CloudTrail and CloudWatch.
 
 - Next, we are going to configure CloudTrail to start tracking logs in realtime.
 	- From AWS management console, search CloudTrail
