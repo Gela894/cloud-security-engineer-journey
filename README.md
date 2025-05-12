@@ -26,10 +26,10 @@ Welcome to my journey toward becoming a **Cloud Security Engineer**. I'm transit
 |--------------|-------------|------|
 | Linux & Bash basics | User, Files, permissions, scripting | ✅ Completed |
 | EC2, SSH, RDP | Key pair, Security groups | ✅ Completed |
-| IAM, MFA | User, Groups, Roles, Policies, Least Privilege | ⌛ In progress |
+| IAM, MFA | User, Groups, Roles, Policies, Least Privilege | ✅ Completed |
 | VPC, Networking essentials | Route tables, NACLs, Subnets, Internet Gateways | ✅ Completed |
 | S3 | Bucket policy, ACL, Encryption, Versioning | ⌛ In progress |
-| CloudWatch, CloudTrail | Logging & Monitoring, Metrics, Alarms | 🪈 In pipeline |
+| CloudWatch, CloudTrail | Logging & Monitoring, Metrics, Alarms | ✅ Completed |
 | Capstone Project | Deploy a secure 2 - tier web app environment | 🪈 In pipeline |
 | AWS Config, Security Hub | Compliance checks, Security aggregation | 🪈 In pipeline |
 | AWS WAF, Shield | Application security, Network protection, Web layer defense | 🪈 In pipeline |
