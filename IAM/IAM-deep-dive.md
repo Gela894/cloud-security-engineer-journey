@@ -110,7 +110,7 @@ Since both dev_user and security_auditor are in the same group i.e. DevTeam, I a
  ![image](https://github.com/user-attachments/assets/caa1a0c4-29c2-4a8f-af11-30d611db48ae)
 	- Policy attached to group
 
-## Monitoring with CloudTrail & CloudWatch
+## Logging and Monitoring with CloudTrail & CloudWatch
 We will be enabling CloudTrail to track IAM actions and monitor logs real-time using CloudWatch. For this, we will create a CloudTrail role for CloudTrail to send logs to CloudWatch.
 - Let's begin by creating a custom CloudWatch policy:
   	- From IAM dashboard, select Policies > create policy
@@ -190,7 +190,7 @@ Now, navigate to CloudWatch to verify log events.
 ![image](https://github.com/user-attachments/assets/983c8e31-e303-4f54-8054-ea16c6a50549)
 
 ### Conclusion
-
+- In summary, IAM is one of the most critical AWS services and it a strong foundation to cloud security. Through this project, I reinforced my understanding of access control, least privilege principle, logging and monitoring. 
 
 
 
