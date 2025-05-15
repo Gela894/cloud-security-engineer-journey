@@ -1,6 +1,6 @@
-# 🌩️ Cloud Security Engineer Journey
+# 🌩️ All things Cloud Security
 
-Welcome to my journey toward becoming a **Cloud Security Engineer**. I'm transitioning from an ISSO role and learning to secure cloud environments using AWS, Terraform, CI/CD, and Python. This repository documents my progress, projects, and weekly learning goals.
+Welcome to my journey towards learning about cloud security. I'm transitioning from an ISSO role and learning to secure cloud environments using AWS, Terraform, CI/CD, and Python. This repository documents my progress, projects, and weekly learning goals.
 
 ---
 
