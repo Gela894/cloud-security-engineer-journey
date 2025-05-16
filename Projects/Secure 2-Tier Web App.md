@@ -28,7 +28,7 @@
 
 *** Insert 2 Tier Architectural diagram ***
 
-## Create Custom VPC
+### 1️⃣ VPC and Networking
 - Create a VPC
     - Fill out the following blocks:
     - 
