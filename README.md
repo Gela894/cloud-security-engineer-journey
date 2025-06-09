@@ -1,6 +1,6 @@
 # 🌩️ All things Cloud Security
 
-Welcome to my journey towards learning about cloud security. I'm transitioning from an ISSO role and learning to secure cloud environments using AWS, Terraform, CI/CD, and Python. This repository documents my progress, projects, and weekly learning goals.
+Welcome to my journey towards learning about cloud security. I'm gradually learning about how to secure cloud environments by focusing on specific services in AWS, utilizing Terraform for automation, and building secure CI/CD pipelines. This repository documents my progress, projects, and weekly learning goals.
 
 ---
 
