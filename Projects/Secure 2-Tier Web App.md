@@ -1,35 +1,32 @@
-## 📌 Project Overview
+# 🛡️ Secure a 2-Tier Web Application on AWS
 
-- SecureNext Technologies is developing "DataVault Lite," a lightweight data storage and management solution. Unlike its larger sibling, DataVault, this version is optimized for fast deployment and scalability
-  utilizing a 2-Tier architecture:
+## 📘 Project Overview
 
-  * Web/Application Layer: Application Load Balancer (ALB) + Auto Scaling Group (ASG) in private subnets
+This project demonstrates how to securely deploy a 2-tier web application architecture on AWS using best practices in networking, compute, storage, and infrastructure automation. It includes public-facing EC2 web servers and a private RDS backend, secured by VPC design, IAM roles, and monitoring tools.
 
-  * Database Layer: Amazon RDS (MySQL) with Multi-AZ deployment
+---
 
-- The infrastructure must be highly secure, monitored for real-time threats, and designed with AWS best practices. You have been tasked with architecting and securing the entire stack.
+## 🎯 Objectives
 
-----
+- Build a secure and scalable 2-tier web application architecture
+- Implement public and private subnets within a custom VPC
+- Automate infrastructure using CloudFormation or Terraform
+- Secure traffic with Security Groups, IAM roles, and monitoring
+- Implement auto scaling and load balancing for the web tier
 
-## 🎯 Project Goals
+---
 
-- Security by Design: Implement security at every layer (network, application, and data).
+## 🧰 Tools & Services
 
-- Monitoring and Logging: Enable real-time threat detection and centralized logging.
+- **AWS Services:** VPC, EC2, RDS, ALB, Auto Scaling, IAM, CloudWatch, S3, CloudTrail, GuardDuty
+- **IaC Options:** Terraform or AWS CloudFormation
+- **Languages/CLI:** Bash, YAML, HCL, AWS CLI, Git
 
-- Compliance and Visibility: Ensure the architecture meets compliance standards (e.g., CIS, NIST).
+---
 
-- Threat Detection and Response: Set up alerts for potential threats and vulnerabilities.
+## 📐 Architecture
 
-----
+![image](https://github.com/user-attachments/assets/40339c0d-cc4b-472b-ae71-48dae68d2e05)
 
-
-### Let us begin the project by performing the following task: we will perform these activities in the AWS management console.
-
-*** Insert 2 Tier Architectural diagram ***
-
-### 1️⃣ VPC and Networking
-- Create a VPC
-    - Fill out the following blocks:
-    - 
-To be continued!
+## Networking Setup
+#### - Create a custom VPC
